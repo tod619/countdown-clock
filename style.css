@@ -9,3 +9,26 @@
 html {
     font-size: 62.5%;
 }
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #17181b;
+    position: relative;
+}
+
+.countdown-wrapper {
+    width: 100%;
+    position: absolute;
+    top: 15%;
+    text-align: center;
+    color: #ddd;  
+}
+
+.countdown-wrapper h1 {
+    font-size: 8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 8rem;
+    text-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.5);
+}
