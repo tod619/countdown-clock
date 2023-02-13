@@ -14,10 +14,10 @@ const interval = setInterval(() => {
 
     // Insert days, hours, minutes, seconds into the DOM
     countdown.innerHTML = `
-        <div>${days}</div>
-        <div>${hours}</div>
-        <div>${minutes}</div>
-        <div>${seconds}</div>
+        <div data-content="Days">${days}</div>
+        <div data-content="Hours">${hours}</div>
+        <div data-content="Minutes">${minutes}</div>
+        <div data-content="Seconds">${seconds}</div>
     `
 }, 1000)
 
