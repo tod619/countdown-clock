@@ -1,7 +1,7 @@
 const countdown = document.querySelector('.countdown')
 
 const interval = setInterval(() => {
-    const deadline = new Date(2023,1,25,12,00,00)
+    const deadline = new Date(2023,10,25,12,00,00)
 
     const current = new Date()
 
@@ -19,6 +19,23 @@ const interval = setInterval(() => {
         <div data-content="Minutes">${minutes.length === 1 ? `0${minutes}`: minutes}</div>
         <div data-content="Seconds">${seconds.length === 1 ? `0${seconds}`: seconds}</div>
     `
+
+    if(diff < 0){
+        clearInterval(interval)
+
+        countdown.innerHTML = '<h1>Here We Go!!!</h1>'
+    }
+
+    document.querySelector('.reset').addEventListener('click', ()=> {
+        clearInterval(interval)
+
+        const divs = document.querySelectorAll('.countdown div')
+
+        divs.forEach(div => {
+            div.innerHTML = '00'
+        })
+    })
+
 }, 1000)
 
 
